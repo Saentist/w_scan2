@@ -1,6 +1,10 @@
 ChangeLog:
 --------------------
-[1.0.15]
+
+[next]
+- increase default tuning timeout to "-t2"
+
+[1.0.15] 2024-01-02
 - VLC output: include logical channel numbers (LCN) in titles, when available
 - DVB-T/T2: fix LCN parsing
 - remove unused -G/--output-dvbsrc option

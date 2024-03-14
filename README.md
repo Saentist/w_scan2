@@ -40,7 +40,8 @@ make
 #### Gentoo
 
 ```sh
-layman -a stefantalpalaru
+eselect repository enable stefantalpalaru
+emaint sync --repo stefantalpalaru
 emerge w_scan2
 ```
 
@@ -58,37 +59,37 @@ country (ATSC, DVB-C and DVB-T) or '-s' for satellite (DVB-S).
 #### DVB-C (using Germany as country, option -c)
 
 ```sh
-./w_scan2 -fc -c DE >> channels.conf
+./w_scan2 -fc -c DE > channels.conf
 ```
 
 #### DVB-T
 
 ```sh
-./w_scan2 -c DE >> channels.conf
+./w_scan2 -c DE > channels.conf
 ```
 
 #### DVB-C and DVB-T
 
 ```sh
-./w_scan2 -c DE >> channels.conf && ./w_scan2 -fc -c DE >> channels.conf
+./w_scan2 -c DE > channels.conf && ./w_scan2 -fc -c DE > channels.conf
 ```
 
 #### ATSC (terrestrial, using United States as country)
 
 ```sh
-./w_scan2 -fa -c US >> channels.conf
+./w_scan2 -fa -c US > channels.conf
 ```
 
 #### US Digital Cable (QAM Annex-B)
 
 ```sh
-./w_scan2 -A2 -c US >> channels.conf
+./w_scan2 -A2 -c US > channels.conf
 ```
 
 #### ATSC, both terrestrial and digital cable
 
 ```sh
-./w_scan2 -A3 -c US >> channels.conf
+./w_scan2 -A3 -c US > channels.conf
 ```
 
 #### DVB-S, here: Astra 19.2 east
